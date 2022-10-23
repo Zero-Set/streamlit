@@ -36,6 +36,5 @@ c = alt.Chart(df2).mark_circle().encode(
 st.write(c)
 
 # Example 6
-
 st.latex('\sum_{i=0}^{n} a_i')
 
