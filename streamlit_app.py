@@ -19,9 +19,11 @@ pre_populate_list = ['Avocado','Strawberries']
 # let's put a pick list here so they can pick the fruit they want to include
 fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),pre_populate_list)
 fruits_to_show = my_fruit_list.loc[fruits_selected]
-
 # display the table on the page
 streamlit.dataframe(fruits_to_show)
+
+streamlit.header('Fruityvice Fruit Advice!')
+
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response)
