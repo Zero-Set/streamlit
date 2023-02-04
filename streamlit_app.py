@@ -44,3 +44,6 @@ my_cur.execute(QUERY)
 my_data_rows = my_cur.fetchall()
 streamlit.text(MSG)
 streamlit.dataframe(my_data_rows)
+
+add_my_fruit = streamlit.text_input('What fruit would you liketo add?','jackfruit')
+streamlit.write('Thanks for adding jackfruit', add_my_fruit)
